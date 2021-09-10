@@ -27,17 +27,26 @@
     <main>
     <div class="flut">
         <div id="bordao">
-            <p class="pos">Mais conhecimento<br> nunca é demais</p>
+            <p class="pos">{{ home.titulo }}</p>
         </div>
         <div>
-            <p id="frase">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit. </p>
+            <p id="frase">{{ home.subtitulo }}</p>
         </div>
         <div id="botcad">
             <a href="{% url 'notfound' %}" id="cadastro">CADASTRE-SE</a>
         </div>
     </div>
     <div>
+    {% if home.imagem  %}
+
+        <img src="{{ home.imagem.url }}" alt="computador" id="comp" >
+
+    {% else %}
+
         <img src="{% static 'imagens/pc.png' %}" alt="computador" id="comp" >
+
+    {% endif %}
+
     </div>
     </main>
     <footer>

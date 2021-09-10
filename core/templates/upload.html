@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+</head>
+<body id="uploads">
+    <header id="navbar">
+        <nav>
+            <img src="{% static 'imagens/UF.png' %}" alt="Logo do site" id="logo">
+            <ul class="lista">
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'sobre' %}">SOBRE</a></li>
+                <li><a href="{% url 'servicos' %}">SERVIÇOS</a></li>
+                <li><a href="{% url 'explorar' %}">EXPLORAR</a></li>
+                <li><a href="{% url 'contato' %}">CONTATO</a></li>
+            </ul>
+                <a href="{% url 'notfound' %}"id="entrar"> ENTRAR </a>
+        </nav>   
+    </header>
+    <main id="carregamento">
+        <div id="mat">
+            <div class="materias">
+                <p class="caixa">Arraste o arquivo ate aqui</p>
+                <div id="botoes">
+                    <label for="arquivo" class="uplabel"><input type="file" name="arquivo" id="arquivo" class="upinput">Enviar arquivo</label>
+                    <a href="{% url 'notfound' %}" id="enviarvideo">Enviar</a>
+                </div>     
+            </div>
+            <div class="materias">
+                <textarea cols="100" rows="10" id="instruçoes">Instruções sobre o arquivo</textarea>
+                <a href="{% url 'notfound' %}" id="enviarvideo2">Enviar</a>
+            </div>
+        </div>
+        <div id="disciplinastit">
+            <div class="tema">    
+                <h1 class="titTema">Disciplina</h1>
+                <input type="text" name="insirir disciplina" size="45" value="Insira a disciplina" class="upinput">
+            </div>
+            <div class="tema">    
+                <h1 class="titTema">Assunto</h1>
+                <input type="text" name="insirir assunto" size="45" value="Insira o assunto" class="upinput">
+            </div>
+            <a href="{% url 'notfound' %}" id="confirmarpostagem">Confirmar postagem</a>    
+        </div>
+    </main>
+    
+</body>
+</html>

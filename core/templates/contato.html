@@ -9,6 +9,7 @@
     <title>Contato</title>
     <link rel="stylesheet" href="{% static 'base.css' %}">
     <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
 </head>
 <body id="contato">
     <header id="navbar">
@@ -33,23 +34,31 @@
                     <img src="{% static 'imagens/email.png' %}" alt="cartinha email" class="vector">
                     <div>
                         <h2 class="tituloentrecontato">E-MAIL</h2>
-                        <p>email@gmail.com</p>
+                        <p>{{ contato.email }}</p>
                     </div>
                 </div>
                 <div id="telcontato">
                     <img src="{% static 'imagens/telefone.png' %}" alt="telefone" class="vector">
                     <div>
                         <h2 class="tituloentrecontato">TELEFONE</h2>
-                        <p>+55 (84) 4002-8922</p>
+                        <p>+55 (84) {{ contato.numero }}</p>
                     </div>
                 </div> 
+                <div id="instaeface">
+                    <div>
+                        <a href="{% url 'notfound' %}"><img src="{% static 'imagens/insta.png' %}" alt="insta icon vector" id="insta"></a>
+                    </div>
+                    <div>
+                        <a href="{% url 'notfound' %}"><img src="{% static 'imagens/face.png' %}" alt="face icon vector" id="face"></a>
+                    </div>    
+                </div>
             </div> 
             <div id="form">
                 <input type="text" name="nome" size="45" value="NOME:" class="inputcont"> 
                 <input type="text" name="telefone" size="44" value="TELEFONE:" class="inputcont"><br>
                 <input type="text" name="email" size="96" value="EMAIL:" class="inputcont"><br>
                 <input type="text" name="assunto" size="96" value="ASSUNTO:" class="inputcont"><br>
-                <textarea cols="114" rows="10" class="textareacont" >MENSAGEM</textarea><br>
+                <textarea cols="114" rows="10" class="textareacont">MENSAGEM</textarea><br>
                 <a href="{% url 'notfound' %}" id="enviar">ENVIAR</a> 
             </div>
         </div>

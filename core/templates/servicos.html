@@ -30,7 +30,7 @@
         </div>
         <div>
            <div id="upload"> 
-               <a href="#"><img src="{% static 'imagens/upload.png' %}" alt="upload" class="tamanho" ></a>
+               <a href="{% url 'upload' %}"><img src="{% static 'imagens/upload.png' %}" alt="upload" class="tamanho" ></a>
             </div>
         <div id="assistir">
             <a href="{% url 'assist' %}"><img src="{% static 'imagens/assistir.png' %}" alt="assistir" class="tamanho1" ></a>
@@ -38,18 +38,26 @@
         </div>
         <div>
             <div id="textup">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Donec a lobortis lectus.  Nulla imperdiet vulputate vehicula. 
-                    Nunc congue bibendum dapibus. Quisque consequat risus lorem
-                    , a ultricies nibh pellentesque ac.</p>
+                <p>{{ servico.descricaoupload }}</p>
             </div>
             <div id="textas">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Donec a lobortis lectus.  Nulla imperdiet vulputate vehicula. 
-                    Nunc congue bibendum dapibus. Quisque consequat risus lorem
-                    , a ultricies nibh pellentesque ac.</p>
+                <p>{{ servico.descricaovideo }}</p>
             </div>
         </div>
+        <section id="maindepo">
+            <h1 class="centro">Depoimentos</h1>
+            {% for depoi in depoimentos %}
+            <div class="depoimentosblocos">
+                <div id="depoimentocor1">
+                    <div>
+                        <img src="{{ depoi.imagem_depoimento.url }}" alt="foto de perfil" class="perfil">
+                        <p class="nomefoto">{{ depoi.nome_depoimento }}</p>
+                    </div>
+                    <p>{{ depoi.depoimento }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
         <footer>
             <p class="txtmaior">UFstudies </p>&nbsp 
             <p>| Desenvolvido pela EJECT</p>

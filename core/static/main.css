@@ -173,6 +173,12 @@
     width: 35%;
     height: 75%;
 }
+@media screen and (max-width:400px){
+    #divsobre p{
+        width: 80%;
+        padding: 0px;
+    }
+}
 #titulo{
     margin-top: 30px;
     display: flex;
@@ -445,3 +451,151 @@ footer{
 #slider2{
     margin-left: 12%;
 }
+#carregamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.caixa{
+    background-color: #AFE0FF;
+    border-radius: 7px;
+    padding: 80px;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+#mat{
+    margin-top: 120px;
+    margin-right: 150px;
+}
+.upinput[type="file"]{
+    display: none;
+}
+.uplabel{
+    background-color: #AFE0ff;
+    border-radius: 6px;
+    margin: 25px;
+    box-shadow: 0px 1px 3px black;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    width: 60%;
+}
+#botoes{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#enviarvideo{
+    text-align: center;
+    justify-content: center;
+    background-color: #7d00cf;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    width: 30%;
+    box-shadow: 0px 1px 3px black;
+    border: 1px solid black;
+}
+#enviarvideo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+    margin-top: 15px;
+    background-color: #7d00cf;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0px 1px 3px black;
+    border: 1px solid black; 
+}
+.titTema{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+#confirmarpostagem{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    margin-top: 130px;
+    background-color: #7d00cf;
+    box-shadow: 0px 1px 3px black;
+    border: 1px solid black;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+#disciplinastit{
+    margin-top: 110px;
+}
+#instruçoes{
+    padding-top: auto;
+    padding-bottom: auto;
+    text-align: center;
+}
+#uploads{
+    font-family: roboto;
+    font-size: 16px;
+    background-color: #FFBD13; 
+}
+#maindepo{
+    margin-top: 55px;
+}
+.depoimentosblocos{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-top: 15px;
+}
+#depoimentocor1{
+    padding: 19px;
+    background-color: #FFE538;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+#depoimentocor2{
+    padding: 19px;
+    background-color: #EF6034;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+#depoimentocor3{
+    padding: 19px;
+    background-color: #8C4FB6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+#depoimentocor4{
+    padding: 19px;
+    background-color: #AFE0FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.nomefoto{
+    padding-left: 60px;
+}
+.perfil{
+    padding-right: 15px;
+}
+
+

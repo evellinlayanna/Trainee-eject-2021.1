@@ -1,4 +1,4 @@
-{% load static %}
+{% load static%}
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -28,7 +28,7 @@
         <h1 id="title">SOBRE</h1>
         <div id=divsobre>
             <img src="{% static 'imagens/boneca_sobre.png' %}" alt="boneca para o sobre" id="boneca">    
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a lobortis lectus. Nulla imperdiet vulputate vehicula. Nunc congue bibendum dapibus. Quisque consequat risus lorem, a ultricies nibh pellentesque ac. Maecenas blandit, massa id malesuada pretium, leo diam maximus lectus, a dignissim tellus velit in erat. Vestibulum non magna enim. Quisque lectus tellus, commodo pellentesque luctus in, posuere quis lorem. Morbi pretium lectus a ex rhoncus condimentum.</p>
+            <p>{{ sobre.descricao }}</p>
         </div>    
     </main>
     <footer  >
