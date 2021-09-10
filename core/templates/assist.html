@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFstudies - Serviços</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body id="homebg">
+    <header id="navbar">
+        <nav>
+            <img src="{% static 'imagens/UF.png' %}" alt="Logo do site" id="logo">
+            <ul class="lista">
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'sobre' %}">SOBRE</a></li>
+                <li><a href="{% url 'servicos' %}">SERVIÇOS</a></li>
+                <li><a href="{% url 'explorar' %}">EXPLORAR</a></li>
+                <li><a href="{% url 'contato' %}">CONTATO</a></li>
+            </ul>
+                <a href="{% url 'notfound' %}"id="entrar"> ENTRAR </a>
+        </nav>
+        <main>
+            <div id="vidprin">
+            <video width="800" height="490" controls >
+                <source src="{% static 'imagens/video.mp4' %}" type="video/mp4">
+            </video>
+            <div id="vidrela">
+                <div id="relacionados">
+                    <h2>Vídeos relacionados</h2>
+                </div>
+                <a href="{% url 'notfound' %}"><img src="{% static 'imagens/relac.png' %}"></a>
+                <p class="nomerel">Lorem impsun</p>
+                <br>
+                <a href="{% url 'notfound' %}"><img src="{% static 'imagens/relac.png' %}"></a>
+                <p class="nomerel">Lorem impsun</p>
+                <br>
+                <a href="{% url 'notfound' %}"><img src="{% static 'imagens/relac.png' %}"></a>
+                <p class="nomerel">Lorem impsun</p>
+                </div>
+            </div>
+            <div id="titulovid">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            </div>
+            <div id="coment">
+                <textarea cols="80" rows="3">Adicione um comentário ao vídeo</textarea>
+                <input type="submit" value="Comentar" name="comentario" id="inputcoment">
+            </div>
+            <div class="margem">
+               <div id="imgcoment"> <img src="{% static 'imagens/perfil.png' %}" width="90" height="60" ></div>
+               <div id="textcoment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis, ex at commodo molestie, nibh sapien condimentum erat, vel molestie ex dui at elit. Sed pharetra, metus ac aliquam lobortis, nisi nulla tempor sapien, eget interdum mauris dui sit amet mi.</div>
+                <div>Lorem ipsum</div>
+            </div>
+            <footer>
+                <p class="txtmaior">UFstudies </p>&nbsp 
+                <p>| Desenvolvido pela EJECT</p>
+            </footer>
+
+        </main>

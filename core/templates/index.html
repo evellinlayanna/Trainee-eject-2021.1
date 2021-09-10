@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFstudies - Home</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body id="homebg">
+    <header id="navbar">
+        <nav>
+            <img src="{% static 'imagens/UF.png' %}" alt="Logo do site" id="logo">
+            <ul class="lista">
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'sobre' %}">SOBRE</a></li>
+                <li><a href="{% url 'servicos' %}">SERVIÇOS</a></li>
+                <li><a href="{% url 'explorar' %}">EXPLORAR</a></li>
+                <li><a href="{% url 'contato' %}">CONTATO</a></li>
+            </ul>
+                <a href="{% url 'notfound' %}"id="entrar"> ENTRAR </a>
+        </nav>    
+    </header>
+    <main>
+    <div class="flut">
+        <div id="bordao">
+            <p class="pos">Mais conhecimento<br> nunca é demais</p>
+        </div>
+        <div>
+            <p id="frase">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit. </p>
+        </div>
+        <div id="botcad">
+            <a href="{% url 'notfound' %}" id="cadastro">CADASTRE-SE</a>
+        </div>
+    </div>
+    <div>
+        <img src="{% static 'imagens/pc.png' %}" alt="computador" id="comp" >
+    </div>
+    </main>
+    <footer>
+        <p class="txtmaior">UFstudies </p>&nbsp 
+        <p>| Desenvolvido pela EJECT</p>
+    </footer>
+    
+</body>
+</html>

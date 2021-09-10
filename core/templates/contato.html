@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body id="contato">
+    <header id="navbar">
+        <nav>
+            <img src="{% static 'imagens/UF.png' %}" alt="Logo do site" id="logo">
+            <ul class="lista">
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'sobre' %}">SOBRE</a></li>
+                <li><a href="{% url 'servicos' %}">SERVIÇOS</a></li>
+                <li><a href="{% url 'explorar' %}">EXPLORAR</a></li>
+                <li><a href="{% url 'contato' %}">CONTATO</a></li>
+            </ul>
+                <a href="{% url 'notfound' %}"id="entrar"> ENTRAR </a>
+        </nav>    
+    </header>
+    <main>
+        <h1 id="titulo">CONTATOS</h1>
+        <h2 id="entrecontato">ENTRE EM CONTATO</h2>
+        <div id="alinhamentomain">
+            <div id=contatos>    
+                <div id="emailcontato">
+                    <img src="{% static 'imagens/email.png' %}" alt="cartinha email" class="vector">
+                    <div>
+                        <h2 class="tituloentrecontato">E-MAIL</h2>
+                        <p>email@gmail.com</p>
+                    </div>
+                </div>
+                <div id="telcontato">
+                    <img src="{% static 'imagens/telefone.png' %}" alt="telefone" class="vector">
+                    <div>
+                        <h2 class="tituloentrecontato">TELEFONE</h2>
+                        <p>+55 (84) 4002-8922</p>
+                    </div>
+                </div> 
+            </div> 
+            <div id="form">
+                <input type="text" name="nome" size="45" value="NOME:" class="inputcont"> 
+                <input type="text" name="telefone" size="44" value="TELEFONE:" class="inputcont"><br>
+                <input type="text" name="email" size="96" value="EMAIL:" class="inputcont"><br>
+                <input type="text" name="assunto" size="96" value="ASSUNTO:" class="inputcont"><br>
+                <textarea cols="114" rows="10" class="textareacont" >MENSAGEM</textarea><br>
+                <a href="{% url 'notfound' %}" id="enviar">ENVIAR</a> 
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="txtmaior">UFstudies </p>&nbsp 
+        <p>| Desenvolvido pela EJECT</p>
+    </footer>
+</body>
+</html>

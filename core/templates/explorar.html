@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFstudies - Home</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body id="homebg" onload="slider()">
+    <header id="navbar">
+        <nav>
+            <img src="{% static 'imagens/UF.png' %}" alt="Logo do site" id="logo">
+            <ul class="lista">
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'sobre' %}">SOBRE</a></li>
+                <li><a href="{% url 'servicos' %}">SERVIÇOS</a></li>
+                <li><a href="#">EXPLORAR</a></li>
+                <li><a href="{% url 'contato' %}">CONTATO</a></li>
+            </ul>
+                <a href="{% url 'notfound' %}"id="entrar"> ENTRAR </a>
+        </nav>    
+    </header>
+    <main>
+        <div id="pesquisar">
+            
+            <div id="inputexp">
+            <input type="text"/>
+            </div>
+            <div id="lupa" >
+                <img src="{% static 'imagens/lupa.png' %}" width="15" height="15">
+            </div>
+            
+        </div>
+        
+        <h1 class="centro" style="margin-top: 20px;">Últimos vídeos postados</h1>
+        <section id="videos">
+            <div id="slider">
+                <div id="p1">
+                <a href="{% url 'notfound' %}"><img src="{% static 'imagens/vidimg.png' %}"></a>
+                <a href="{% url 'notfound' %}"><img src="{% static 'imagens/vidimg.png' %}"></a>
+                <a href="{% url 'notfound' %}"><img src="{% static 'imagens/vidimg.png' %}"></a>
+                </div>
+                <div id="p2">
+                <a href="{% url 'notfound' %}"><img src="{% static 'imagens/relac.png' %}"></a>
+                <a href="{% url 'notfound' %}"><img src="{% static 'imagens/relac.png' %}"></a>
+                <a href="{% url 'notfound' %}"><img src="{% static 'imagens/relac.png' %}"></a>
+                </div>
+            </div>
+        </section>
+        <h1 class="centro" style="margin-top: -100px;">Vídeos mais assistidos</h1>
+        <section id="ultimos">
+            <div id="slider2">
+                <div id="p3">
+                   <a href="{% url 'notfound' %}"> <img src="{% static 'imagens/vidimg.png' %}" alt="ult"></a>
+                   <a href="{% url 'notfound' %}"> <img src="{% static 'imagens/vidimg.png' %}" alt="ult"></a>
+                   <a href="{% url 'notfound' %}"> <img src="{% static 'imagens/vidimg.png' %}" alt="ult"></a>
+                </div>
+                <div id="p4">
+                    <a href="{% url 'notfound' %}"> <img src="{% static 'imagens/relac.png' %}" alt="ult"></a>
+                    <a href="{% url 'notfound' %}"> <img src="{% static 'imagens/relac.png' %}" alt="ult"></a>
+                    <a href="{% url 'notfound' %}"> <img src="{% static 'imagens/relac.png' %}" alt="ult"></a>
+                 </div>
+            </div>
+        </section>
+        <footer>
+            <p class="txtmaior">UFstudies </p>&nbsp 
+            <p>| Desenvolvido pela EJECT</p>
+        </footer>
+    </main>
